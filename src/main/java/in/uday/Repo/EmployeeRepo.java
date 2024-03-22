@@ -4,8 +4,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import in.uday.Model.Employee;
 
-public interface EmployeeRepo extends JpaRepository<Employee, Long> {
+public interface EmployeeRepo extends JpaRepository<Employee, Integer> {
 
-	Employee findById(long id);
+	Employee findById(Integer id);
 
 }
