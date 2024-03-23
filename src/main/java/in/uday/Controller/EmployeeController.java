@@ -20,7 +20,7 @@ public class EmployeeController {
 	private EmployeeService employeeService;
 
 	@GetMapping("/tax-deduction/{employeeId}")
-	public ResponseEntity<Object> calculateTaxDeduction(@PathVariable Long employeeId) {
+	public ResponseEntity<Object> calculateTaxDeduction(@PathVariable Integer employeeId) {
 		try {
 			TaxDeductionResponse taxDeduction = employeeService.calculateTaxDeduction(employeeId);
 			return ResponseEntity.ok(taxDeduction);
