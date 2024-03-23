@@ -17,7 +17,7 @@ public class EmployeeService {
 	@Autowired
 	private EmployeeRepo employeeRepository;
 
-	public TaxDeductionResponse calculateTaxDeduction(Long employeeId) {
+	public TaxDeductionResponse calculateTaxDeduction(Integer employeeId) {
 		Employee employee = employeeRepository.findById(employeeId)
 				.orElseThrow(() -> new EntityNotFoundException("Employee not found"));
 
